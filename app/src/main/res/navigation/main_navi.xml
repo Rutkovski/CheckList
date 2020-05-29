@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navi"
+    app:startDestination="@+id/navigation_checkList">
+
+    <fragment
+        android:id="@+id/navigation_template"
+        android:name="com.rutkovski.checklist.ui.TemplateFragment"
+        android:label="Шаблоны"
+        tools:layout="@layout/fragment_template">
+        <action
+            android:id="@+id/action_templateFragment_to_startFragment"
+            app:destination="@+id/navigation_checkList" />
+        <action
+            android:id="@+id/action_templateFragment_to_otherFragment"
+            app:destination="@+id/navigation_other" />
+        <action
+            android:id="@+id/action_navigation_template_to_checkListDiagnosticActivity"
+            app:destination="@id/checkListDiagnosticActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_checkList"
+        android:name="com.rutkovski.checklist.ui.StartFragment"
+        android:label="Чек-листы"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_navigation_checkList_to_addCheckListActivity"
+            app:destination="@id/addCheckListActivity" />
+        <action
+            android:id="@+id/action_navigation_checkList_to_checkListTemplateActivity"
+            app:destination="@id/checkListTemplateActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_other"
+        android:name="com.rutkovski.checklist.ui.OtherFragment"
+        android:label="Прочее"
+        tools:layout="@layout/fragment_other" />
+    <activity
+        android:id="@+id/addCheckListActivity"
+        android:name="com.rutkovski.checklist.AddCheckListActivity"
+        android:label="activity_add_chek_list"
+        tools:layout="@layout/activity_add_chek_list" />
+    <activity
+        android:id="@+id/checkListDiagnosticActivity"
+        android:name="com.rutkovski.checklist.CheckListDiagnosticActivity"
+        android:label="activity_check_list_diagnostic"
+        tools:layout="@layout/activity_check_list_diagnostic" />
+    <activity
+        android:id="@+id/checkListTemplateActivity"
+        android:name="com.rutkovski.checklist.CheckListTemplateActivity"
+        android:label="activity_check_list_template"
+        tools:layout="@layout/activity_check_list_template" />
+    <activity
+        android:id="@+id/pointAddNoteActivity"
+        android:name="com.rutkovski.checklist.PointAddNoteActivity"
+        android:label="activity_point_add_note"
+        tools:layout="@layout/activity_point_add_note" />
+</navigation>

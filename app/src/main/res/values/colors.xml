@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#408AD2</color>
+    <color name="colorPrimaryDark">#0C5AA6</color>
+    <color name="colorAccent">#408AD2</color>
+    <color name="white_color">#FFFFFF</color>
+    <color name="gainsboro_color">#DCDCDC</color>
+    <color name="slategray_color">#708090</color>
+    <color name="red">#FF0000</color>
+    #FF0000
+
+
+</resources>
